@@ -6,6 +6,8 @@ services:
     rootDir: apps/backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
     envVars:
       - key: CORS_ORIGINS
         value: https://agentos-web.onrender.com
@@ -20,6 +22,7 @@ services:
     rootDir: apps/frontend
     buildCommand: npm install && npm run build
     startCommand: npm start
+    autoDeployTrigger: commit
     envVars:
       - key: NEXT_PUBLIC_API_URL
         value: https://agentos-api.onrender.com
