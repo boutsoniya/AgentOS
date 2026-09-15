@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: agentos-api
+    runtime: python
+    plan: free
+    rootDir: apps/backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: CORS_ORIGINS
+        value: https://agentos-web.onrender.com
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5-mini
+  - type: web
+    name: agentos-web
+    runtime: node
+    plan: free
+    rootDir: apps/frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        value: https://agentos-api.onrender.com
