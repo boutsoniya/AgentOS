@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tier2-retail-01",
+    "question": "What factors should a retailer evaluate before expanding into Tier-2 Indian cities?",
+    "gold_terms": ["demand", "logistics", "competition", "store economics"],
+    "gold_source_types": ["document", "web"]
+  },
+  {
+    "id": "ai-governance-01",
+    "question": "What controls reduce risk when deploying an AI decision-support system?",
+    "gold_terms": ["evaluation", "monitoring", "human oversight", "security"],
+    "gold_source_types": ["document", "web"]
+  },
+  {
+    "id": "pricing-01",
+    "question": "Which evidence is useful when deciding whether to change product pricing?",
+    "gold_terms": ["demand", "margin", "competitor", "conversion"],
+    "gold_source_types": ["document", "web"]
+  }
+]
