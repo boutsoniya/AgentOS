@@ -1,0 +1,6 @@
+[
+  {"id":"retail-expansion-01","query":"tier-2 city retail expansion consumer demand","relevant_ids":["d1c1"]},
+  {"id":"retail-expansion-02","query":"store expansion logistics operating costs","relevant_ids":["d1c2"]},
+  {"id":"pricing-01","query":"price elasticity and revenue tradeoffs","relevant_ids":["d2c1"]},
+  {"id":"climate-01","query":"extreme heat impact on retail operations","relevant_ids":["d3c1"]}
+]
